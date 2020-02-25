@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <h1 id="loadText"> Loaded in... </h1>
+    <table>
+      {{ table_contents|safe }}
+    </table>
+  </body>
+
+  <script>
+    let oldDate = new Date();
+
+    document.onreadystatechange = function () {
+      if (document.readyState == "complete") {
+        let newDate = new Date();
+        document.getElementById("loadText").textContent = `Loaded in ${newDate - oldDate} ms`
+      }
+    }
+  </script>
+</html>
