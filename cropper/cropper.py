@@ -4,8 +4,8 @@ import os
 def crop():
     # change the sub picture sizes here
     # measurement in pixels
-    SUBPIC_HEIGHT = 100
-    SUBPIC_WIDTH = 100
+    SUBPIC_HEIGHT = 50
+    SUBPIC_WIDTH = 50
 
     image = Image.open("original.jpg")
     image_width, image_height = image.size

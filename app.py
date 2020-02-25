@@ -6,11 +6,11 @@ app = Flask(__name__)
 @app.route("/image")
 def load_image():
     # assume a square image is used the original
-    # and that each box is 100px * 100px
+    # and that each box is 50px * 50px
     IMAGE_DIMENSION = 1500
     IMAGE_EXT = ".png"
-
-    IMAGES_PER_COL = IMAGE_DIMENSION // 100
+    BOX_SIZE = 50
+    IMAGES_PER_COL = IMAGE_DIMENSION // BOX_SIZE
 
     table_contents = []
 
