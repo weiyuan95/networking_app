@@ -39,7 +39,7 @@ def load_image():
 @app.route("/hpack")
 def hpack():
     resp = make_response("SSS was a hard mod")
-    resp.headers.update(headers.generate_headers())
+    resp.headers.update(headers.generate_headers(26))
     return resp
 
 @app.route("/oneimage")

@@ -1,9 +1,9 @@
-def generate_headers():
+def generate_headers(num_headers):
     char_counter = 64
     header_text = ""
     headers = {}
 
-    for i in range(1000):
+    for i in range(num_headers):
         char_counter += 1
 
         if char_counter > 90:
