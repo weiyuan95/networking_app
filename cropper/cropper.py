@@ -6,8 +6,13 @@ def crop():
     # measurement in pixels
     SUBPIC_HEIGHT = 50
     SUBPIC_WIDTH = 50
+    image_to_crop = "img_2.jpg"
 
     image = Image.open("img_2.jpg")
+
+    if image_to_crop == "img_2.jpg":
+        image = image.crop((0, 0, 3600, 3600))
+
     image_width, image_height = image.size
     print(image_width, image_height, "\n")
     pic_no = 1
