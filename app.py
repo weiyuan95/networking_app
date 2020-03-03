@@ -7,7 +7,7 @@ app = Flask(__name__)
 def load_image():
     # assume a square image is used the original
     # and that each box is 50px * 50px
-    IMAGE_DIMENSION = 3600
+    IMAGE_DIMENSION = 2000
     IMAGE_EXT = ".png"
     BOX_SIZE = 50
     IMAGES_PER_COL = IMAGE_DIMENSION // BOX_SIZE
