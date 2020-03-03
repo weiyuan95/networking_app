@@ -1,4 +1,5 @@
-from flask import Flask, url_for, g, render_template
+from flask import Flask, url_for, g, render_template, make_response
+from helpers import headers
 import time
 
 app = Flask(__name__)
@@ -35,6 +36,12 @@ def load_image():
     return render_template("image.html",
                             table_contents=table_string)
 
+@app.route("/hpack")
+def hpack():
+    resp = make_response("SSS was a hard mod")
+    resp.headers.update(headers.generate_headers())
+    return resp
+
 @app.route("/oneimage")
 def load_one_image():
     table_string = ""
@@ -53,6 +60,7 @@ def load_one_image():
 
     return render_template("image.html",
                         table_contents=table_string)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
