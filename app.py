@@ -34,5 +34,24 @@ def load_image():
     return render_template("image.html",
                             table_contents=table_string)
 
+@app.route("/oneimage")
+def load_one_image():
+    table_string = ""
+    image_tag = f"<img height='50px' width='50px' src='{url_for('static', filename='original.jpg')}'/>"
+
+    NUM_ROWS = 50
+    NUM_COLS = 50
+
+    for row_num in range(NUM_ROWS):
+        table_string += "<tr>"
+
+        for col_num in range(NUM_COLS):
+            table_string += f"<td>{image_tag}</td>"
+
+        table_string += "</tr>"
+
+    return render_template("image.html",
+                        table_contents=table_string)
+
 if __name__ == "__main__":
     app.run(debug=True)

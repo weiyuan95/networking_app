@@ -7,7 +7,7 @@ def crop():
     SUBPIC_HEIGHT = 50
     SUBPIC_WIDTH = 50
 
-    image = Image.open("original.jpg")
+    image = Image.open("img_2.jpg")
     image_width, image_height = image.size
     print(image_width, image_height, "\n")
     pic_no = 1
