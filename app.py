@@ -1,8 +1,10 @@
 from flask import Flask, url_for, g, render_template, make_response
+from flask_cors import CORS
 from helpers import headers
 import time
 
 app = Flask(__name__)
+CORS(app)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 @app.route("/image")
