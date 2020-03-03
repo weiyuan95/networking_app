@@ -11,7 +11,7 @@ def crop():
     image = Image.open("img_2.jpg")
 
     if image_to_crop == "img_2.jpg":
-        image = image.crop((0, 0, 1000, 1000))
+        image = image.crop((0, 0, 500, 500))
 
     image_width, image_height = image.size
     print(image_width, image_height, "\n")
