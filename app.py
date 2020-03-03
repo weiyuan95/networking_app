@@ -2,6 +2,7 @@ from flask import Flask, url_for, g, render_template
 import time
 
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 @app.route("/image")
 def load_image():
