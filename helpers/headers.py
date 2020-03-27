@@ -14,6 +14,10 @@ def generate_headers(num_headers):
 
         headers[header_text] = "ABCKJHDSAKUFGKNIUHNFKWJNEFIKJNDSKHIKIOSEUHFKSNDBKJUSBDFJKHSBDFGJKBHSDGFJUYH"
 
+        headers = {
+            'cookie': 'A' * 200
+        }
+
     return headers
 
 if __name__ == "__main__":
